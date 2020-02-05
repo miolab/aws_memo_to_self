@@ -29,11 +29,34 @@
 - Dockerをyumでインストール
     ```
     $ sudo yum install -y docker
+
+    Loaded plugins: priorities, update-motd, upgrade-helper
+    amzn-main                                                   | 2.1 kB  00:00:00
+    amzn-updates                                                | 2.5 kB  00:00:00
+    Resolving Dependencies
+    .
+    .
+    （中略）
+    .
+    .
+
+    Complete!
+
+    ```
+
+- Dockerが入ったことを確認
+    ```
+    $ docker --version
+
+    Docker version 18.09.9-ce, build 039a7df
     ```
 
 - Dockerの起動
     ```
     $ sudo service docker start
+
+    Starting cgconfig service:                                 [  OK  ]
+    Starting docker:        .                                  [  OK  ]
     ```
 
 - ec2-userをDockerグループに入れる
